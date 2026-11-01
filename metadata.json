@@ -1,0 +1,6 @@
+{
+  "name": "WAZOBET - Premium African Sports Betting & Entertainment",
+  "description": "WAZOBET is Kenya's premier online sportsbook featuring live sports betting, instant M-Pesa deposits, real-time in-play odds, multi-market accumulators, and mega jackpots.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

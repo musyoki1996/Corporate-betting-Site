@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --wazo-navy: #03133D;
+    --wazo-navy-dark: #020B24;
+    --wazo-navy-surface: #071B49;
+    --wazo-navy-card: #0D204B;
+    --wazo-navy-border: #182C5E;
+    --wazo-green: #38E000;
+    --wazo-green-bright: #62F500;
+    --wazo-green-dark: #2ab800;
+    --wazo-gold: #FFC400;
+    --wazo-gold-light: #FFD54F;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--wazo-navy);
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom scrollbar for betting and fixture columns */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #03133D;
+}
+::-webkit-scrollbar-thumb {
+  background: #182C5E;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38E000;
+}
+
+/* Tabular numerals for odds, time and currency */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Odds pulse animations when live odds fluctuate */
+@keyframes oddsUp {
+  0% { background-color: rgba(56, 224, 0, 0.4); }
+  100% { background-color: transparent; }
+}
+
+@keyframes oddsDown {
+  0% { background-color: rgba(239, 68, 68, 0.4); }
+  100% { background-color: transparent; }
+}
+
+.odds-shift-up {
+  animation: oddsUp 1.2s ease-out;
+}
+
+.odds-shift-down {
+  animation: oddsDown 1.2s ease-out;
+}
